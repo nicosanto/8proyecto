@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">8proyecto</string>
+    <string name="titulo1">Principal</string>
+    <string name="titulo2">Detalle del Usuario</string>
+    <string name="tituloboton">Mostrar</string>
+    <string name="hintNombre">Nombre</string>
+    <string name="hintClave">Clave</string>
+</resources>
