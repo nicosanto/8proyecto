@@ -32,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String nombre = edtNombre.getText().toString();
                 String clave = edtClave.getText().toString();
-                if (nombre.equals("ites") && clave.equals("1234")) {      //XQ NO FUNCIONA "@string/usuarioCorrecto"??
+                //getResources().getString("@string/usuarioCorrecto")
+                if (nombre.equals("ites") && clave.equals("1234")) {
                     //Toast.makeText(MainActivity.this, "Datos Correctos", Toast.LENGTH_SHORT).show(); //Bandera
 
                     //Llamo a la funcion
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void mostrarActividad(){
 
-        //Intent Explicito
+        // Intent Explicito
         Intent intent = new Intent(this, SegundaActivity.class);
 
         //Le paso la variable global con el dato del control
