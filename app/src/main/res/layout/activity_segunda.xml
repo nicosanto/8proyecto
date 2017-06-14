@@ -4,18 +4,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/fondobienvenida"
+    android:background="@drawable/fondobienvenida"
     tools:context="nicosanto.a8proyecto.SegundaActivity">
 
     <TextView
         android:id="@+id/txtNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="69dp"
+        android:text="@string/bienvenida"
         android:textSize="36sp"
         tools:ignore="HardcodedText"
         tools:layout_editor_absoluteX="162dp"
-        tools:layout_editor_absoluteY="118dp"
+        tools:layout_editor_absoluteY="118dp" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/hintTelefono"
+        android:inputType="phone"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btnMarcar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/botonMarcar"
+        android:textColor="@android:color/background_light"
+        android:layout_above="@+id/btnFinalizar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="43dp" />
+
+    <Button
+        android:id="@+id/btnFinalizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/botonFinalizar"
+        android:textColor="@android:color/background_light"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/btnMarcar"
+        android:layout_alignStart="@+id/btnMarcar"
+        android:layout_marginBottom="47dp" />
+
 </RelativeLayout>

@@ -4,16 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/fondobienvenida"
+    android:background="@drawable/fondobienvenida"
     tools:context="nicosanto.a8proyecto.MainActivity">
 
     <EditText
         android:id="@+id/txtNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/txtClave"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="44dp"
+        android:layout_centerVertical="true"
         android:ems="10"
         android:hint="@string/hintNombre"
         android:inputType="textPersonName"
@@ -25,26 +24,48 @@
         android:id="@+id/btnAceptar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txtClave"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="51dp"
+        android:layout_marginBottom="30dp"
         android:background="@color/colorPrimaryDark"
         android:text="@string/tituloboton"
         android:textColor="@android:color/background_light"
         tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="330dp" />
+        tools:layout_editor_absoluteY="330dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:id="@+id/txtClave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/txtNombre"
-        android:layout_alignStart="@+id/txtNombre"
-        android:layout_centerVertical="true"
         android:ems="10"
         android:hint="@string/hintClave"
         android:inputType="textPassword"
         tools:layout_editor_absoluteX="84dp"
-        tools:layout_editor_absoluteY="192dp" />
+        tools:layout_editor_absoluteY="192dp"
+        android:layout_below="@+id/txtNombre"
+        android:layout_alignLeft="@+id/txtNombre"
+        android:layout_alignStart="@+id/txtNombre"
+        android:layout_marginTop="46dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp"
+        android:text="@string/titulo0"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@android:dimen/app_icon_size"
+        android:layout_height="@android:dimen/app_icon_size"
+        android:contentDescription=""
+        app:srcCompat="@drawable/login"
+        tools:ignore="ContentDescription,RtlHardcoded"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp" />
 
 </RelativeLayout>

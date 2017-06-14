@@ -6,11 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-
-    private EditText edtNombre;  //Creo variable global vacia
-    private EditText edtClave; //(Buena practica de programacion: Coincida nombre con ID)
+    //Creo variable global vacia (Buena practica de programacion: Coincida nombre con ID)
+    private EditText edtNombre;
+    private EditText edtClave;
     private Button btnAceptar;
 
     @Override
@@ -22,36 +23,43 @@ public class MainActivity extends AppCompatActivity {
         edtNombre = (EditText) findViewById(R.id.txtNombre);
         edtClave = (EditText) findViewById(R.id.txtClave);
         //R: compila y pone la referencia de todos los que tengo generados.
-        //LE PASO DEL CONTROL EL ID: txtNombre
-
-               //Asignar Texto
-        //edtNombre.setText("Hola");
+        //LE PASO DEL CONTROL SU ID
 
         btnAceptar = (Button) findViewById(R.id.btnAceptar);
-
         //Metodo para gestion del evento click del boton
         btnAceptar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mostrarActividad();
+                String nombre = edtNombre.getText().toString();
+                String clave = edtClave.getText().toString();
+                if (nombre.equals("ites") && clave.equals("1234")) {      //XQ NO FUNCIONA "@string/usuarioCorrecto"??
+                    //Toast.makeText(MainActivity.this, "Datos Correctos", Toast.LENGTH_SHORT).show(); //Bandera
+
+                    //Llamo a la funcion
+                    mostrarActividad();
+                }
+                else {
+                    //Mensaje en pantalla
+                    Toast.makeText(MainActivity.this,"Datos Incorrectos de Usuario o Clave",Toast.LENGTH_LONG).show();
+                    //Vaciar los Controles
+                    edtNombre.setText("");
+                    edtClave.setText("");
+                }
             }
-        });  //Llamo a la funcion
+        });
 
     }
 
     private void mostrarActividad(){
 
-        //intent explicito
+        //Intent Explicito
         Intent intent = new Intent(this, SegundaActivity.class);
 
         //Le paso la variable global con el dato del control
         intent.putExtra("KEY_NOMBRE", edtNombre.getText().toString() );
 
-        //llamado a activity
+        //Llamado a activity
         startActivity(intent);
-
-        //MENSAJE PANTALLA
-        //  Toast.makeText(this,"El mayor es: "+mayor, Toast.LENGTH_SHORT ).show();
     }
 
 }

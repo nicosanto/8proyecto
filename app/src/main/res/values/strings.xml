@@ -1,8 +1,16 @@
 <resources>
     <string name="app_name">8proyecto</string>
-    <string name="titulo1">Principal</string>
+    <string name="titulo0">Control de Acceso</string>
+    <string name="titulo1">Login</string>
     <string name="titulo2">Detalle del Usuario</string>
-    <string name="tituloboton">Mostrar</string>
-    <string name="hintNombre">Nombre</string>
-    <string name="hintClave">Clave</string>
+    <string name="tituloboton">Ingresar</string>
+    <string name="botonMarcar">Marcar</string>
+    <string name="botonFinalizar">Finalizar</string>
+    <string name="hintNombre">Ingrese su Usuario</string>
+    <string name="hintClave">Ingrese su Clave</string>
+    <string name="hintTelefono">Ingrese su Telefono</string>
+    <string name="bienvenida">Bienvenida Usuario </string>
+
+    <string name="usuarioCorrecto">ites</string>
+    <string name="contrasenaCorrecta">1234</string>
 </resources>
