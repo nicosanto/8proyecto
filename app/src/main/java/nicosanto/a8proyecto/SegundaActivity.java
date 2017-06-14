@@ -72,7 +72,8 @@ public class SegundaActivity extends AppCompatActivity {
         // para lo cual se debe desarrollar un método de usuario a tal efecto y enlazado al evento click del boton.
         //Intent Implicito - CALL_DIAL
         edtTelefono = (EditText) findViewById(R.id.edtTelefono);
-        Intent itn = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:"+edtTelefono));
+        String telefono = edtTelefono.getText().toString();
+        Intent itn = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:"+telefono));
         startActivity(itn);
 
     }
