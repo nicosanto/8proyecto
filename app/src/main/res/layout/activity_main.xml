@@ -22,7 +22,7 @@
 
     <Button
         android:id="@+id/btnAceptar"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
         android:background="@color/colorPrimaryDark"
@@ -64,8 +64,8 @@
         android:contentDescription=""
         app:srcCompat="@drawable/login"
         tools:ignore="ContentDescription,RtlHardcoded"
+        android:layout_marginTop="46dp"
         android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp" />
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
