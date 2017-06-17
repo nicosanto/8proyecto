@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="nicosanto.a8proyecto">
 
-    <uses-permission android:name="android.permission.CALL_PHONE"/> //Permiso para realizar la llamada
+    <uses-permission android:name="android.permission.CALL_PHONE"/> //Permiso para realizar llamadas
 
     <application
         android:allowBackup="true"

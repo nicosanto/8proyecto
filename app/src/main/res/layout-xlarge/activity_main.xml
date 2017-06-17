@@ -54,7 +54,7 @@
         android:contentDescription=""
         app:srcCompat="@drawable/login"
         tools:ignore="ContentDescription,RtlHardcoded"
-        android:layout_marginBottom="45dp"
+        android:layout_marginBottom="18dp"
         android:layout_above="@+id/txtNombre"
         android:layout_centerHorizontal="true" />
 

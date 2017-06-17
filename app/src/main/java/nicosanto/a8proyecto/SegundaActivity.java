@@ -19,7 +19,6 @@ public class SegundaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       // setContentView(android.R.layout);
         setContentView(R.layout.activity_segunda);
 
         //LLamo a la funcion
@@ -45,8 +44,6 @@ public class SegundaActivity extends AppCompatActivity {
                 finish();
 
                 //this.finish(); //Cerrar la aplicacion completa
-
-                //Falta vaciar los controles de la actividad principal ??
             }
         });
 
@@ -57,7 +54,7 @@ public class SegundaActivity extends AppCompatActivity {
         //Recupero Parametros
         Bundle parametros = getIntent().getExtras();
 
-        nombre ="Bienvenido "+ parametros.getString("KEY_NOMBRE");  //CALLBACK??
+        nombre ="Bienvenido "+ parametros.getString("KEY_NOMBRE");
 
         //Referencia controles de UI
         TextView txtNombre = (TextView) findViewById(R.id.txtNombre);
@@ -68,28 +65,27 @@ public class SegundaActivity extends AppCompatActivity {
 
     private void marcarLLAMADA(){
 
-        // Se debe incluir un botón para marcar la llamada, según el numero de teléfono que ingreso el usuario,
-        // para lo cual se debe desarrollar un método de usuario a tal efecto y enlazado al evento click del boton.
-        //Intent Implicito (Le pones la accion generica) - CALL_DIAL
         edtTelefono = (EditText) findViewById(R.id.edtTelefono);
         String telefono = edtTelefono.getText().toString();
-        //MARCAR UNA LLAMADA    Uri:tipo de contenido         "smsto:"
+        //***INTENT IMPLICITO*** (Le pones la accion generica)
+        //Marcar una LLamada                        Uri:tipo de contenido
         Intent itn = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:"+telefono));
-        //ACTION_DIAL (Abre el dialogo para llamar); ACTION_CALL (Dispara la llamada)
+        //ACTION_DIAL: Abre el dialogo para llamar | ACTION_CALL: Dispara la llamada
         startActivity(itn);
     }
 
-    //MSJ: LLama a un componente externo, el dialogo de msj para que le des enviar.
+    //Enviar MSJ: Abre el dialogo de msj para que le des enviar (LLama a un componente externo)
     public void componerSMS (String mensaje, String num_telefono){
-        //SMS
+
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("smsto:"+num_telefono));
         intent.putExtra("sms_body:",mensaje);   //mensaje contenido del mensaje
         startActivity(intent);
     }
 
-    //Enviar un E-MAIL
+    //Enviar E-MAIL
     public void componerEmail (String email, String mensaje, String asunto){
+
         Intent intent = new Intent (Intent.ACTION_SEND); //action que voy a realizar.
         intent.setData(Uri.parse("mailto:"));
         intent.putExtra(Intent.EXTRA_EMAIL, email);

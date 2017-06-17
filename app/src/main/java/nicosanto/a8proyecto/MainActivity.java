@@ -20,13 +20,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //text=(TextView)findViewById(R.id.tv1);
-        edtNombre = (EditText) findViewById(R.id.txtNombre);
+        edtNombre = (EditText) findViewById(R.id.txtNombre);  //LE PASO DEL CONTROL SU ID
         edtClave = (EditText) findViewById(R.id.txtClave);
         //R: compila y pone la referencia de todos los que tengo generados.
-        //LE PASO DEL CONTROL SU ID
 
         btnAceptar = (Button) findViewById(R.id.btnAceptar);
-        //Metodo para gestion del evento click del boton
+        //Evento click del Boton
         btnAceptar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,8 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 //getResources().getString("@string/usuarioCorrecto")
                 if (nombre.equals("ites") && clave.equals("1234")) {
                     //Toast.makeText(MainActivity.this, "Datos Correctos", Toast.LENGTH_SHORT).show(); //Bandera
-
-                    //Llamo a la funcion
+                    //Llamo  a la funcion
                     mostrarActividad();
                 }
                 else {
@@ -53,11 +51,14 @@ public class MainActivity extends AppCompatActivity {
 
     private void mostrarActividad(){
 
-        // Intent Explicito
+        //***INTENT EXPLICITO***
         Intent intent = new Intent(this, SegundaActivity.class);
 
         //Le paso la variable global con el dato del control
         intent.putExtra("KEY_NOMBRE", edtNombre.getText().toString() );
+
+        edtNombre.setText("");
+        edtClave.setText("");
 
         //Llamado a activity
         startActivity(intent);

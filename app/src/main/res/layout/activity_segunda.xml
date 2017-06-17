@@ -11,22 +11,24 @@
         android:id="@+id/txtNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="69dp"
         android:text="@string/bienvenida"
+        android:textAlignment="center"
         android:textSize="36sp"
         tools:ignore="HardcodedText"
         tools:layout_editor_absoluteX="162dp"
-        tools:layout_editor_absoluteY="118dp" />
+        tools:layout_editor_absoluteY="118dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp" />
 
     <EditText
         android:id="@+id/edtTelefono"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
+        android:ems="12"
         android:hint="@string/hintTelefono"
         android:inputType="phone"
+        android:textAlignment="center"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
@@ -37,9 +39,9 @@
         android:background="@color/colorPrimaryDark"
         android:text="@string/botonMarcar"
         android:textColor="@android:color/background_light"
-        android:layout_above="@+id/btnFinalizar"
+        android:layout_below="@+id/edtTelefono"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="43dp" />
+        android:layout_marginTop="16dp" />
 
     <Button
         android:id="@+id/btnFinalizar"
@@ -48,9 +50,7 @@
         android:background="@color/colorPrimaryDark"
         android:text="@string/botonFinalizar"
         android:textColor="@android:color/background_light"
-        android:layout_marginBottom="14dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/txtNombre"
-        android:layout_alignEnd="@+id/txtNombre" />
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
