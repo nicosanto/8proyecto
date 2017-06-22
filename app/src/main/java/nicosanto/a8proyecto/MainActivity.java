@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    //Creo variable global vacia (Buena practica de programacion: Coincida nombre con ID)
+    //Creo variable global vacia  (Buena practica de programacion: Coincida nombre con ID)
     private EditText edtNombre;
     private EditText edtClave;
     private Button btnAceptar;
